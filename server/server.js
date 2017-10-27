@@ -19,6 +19,9 @@ massive( process.env.CONNECTION_STRING ).then( db => {
 
 
 app.get( '/api/stuff', stuff_controller.getStuff )
+app.post( '/api/addStuff', stuff_controller.addStuff )
+app.delete( '/api/deleteStuff/:id', stuff_controller.deleteStuff )
+app.put( '/api/likeStuff/:id', stuff_controller.likeStuff )
 
 
 let port = 3030

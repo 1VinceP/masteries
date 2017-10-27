@@ -4,15 +4,16 @@ CREATE TABLE IF NOT EXISTS Stuff
 ( 
     id SERIAL PRIMARY KEY,
     title VARCHAR(100),
-    info VARCHAR(300)
+    info VARCHAR(300),
+    liked BOOLEAN
 );
 
 INSERT INTO Stuff
-    ( title, info )
+    ( title, info, liked )
     VALUES
-        ( 'Thing One', 'The first thing' ),
-        ( 'Thing Two', 'The second thing' ),
-        ( 'Thing Three', 'The third thing' );
+        ( 'Thing One', 'The first thing', false ),
+        ( 'Thing Two', 'The second thing', false ),
+        ( 'Thing Three', 'The third thing', false );
 
 
 -- A DataType is a very important structure in a database. It defines the type of each value.

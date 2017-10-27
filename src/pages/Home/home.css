@@ -24,3 +24,18 @@ html {
     align-items: center;
     flex-wrap: wrap;
 }
+
+.home-stuff {
+    color: blue;
+    font-weight: 900;
+    font-size: 10px;
+}
+
+.home-stuff > span {
+    background: yellow;
+}
+
+.home-stuff button {
+    border-radius: 10px;
+    font-family: cursive;
+}
