@@ -41,6 +41,8 @@ class Home extends Component {
                     <button onClick={() => this.handleLiked(stuff.id)} >{ stuff.liked + '' }</button>
                     <span className=''>{ stuff.title }</span>
                     <button onClick={() => this.handleDelete(stuff.id)} >DELETE</button>
+                    <br/>
+                    <div>{stuff.info}</div>
                 </div>
                 
             )
