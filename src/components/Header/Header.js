@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { getStuff } from '../../redux/reducers/reducer';
 import './header.css'
 
 class Header extends Component {
@@ -6,8 +8,12 @@ class Header extends Component {
         super();
 
         this.state = {
-
+            
         }
+    }
+
+    componentDidMount() {
+        this.props.getStuff()
     }
 
     render() {
@@ -19,4 +25,9 @@ class Header extends Component {
     }
 }
 
-export default Header;
+function mapStateToProps( state ) {
+
+    return { state }
+}
+
+export default connect( mapStateToProps, { getStuff } )(Header);
