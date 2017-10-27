@@ -21,13 +21,19 @@ class Home extends Component {
 
     render() {
 
+        let mappedStuff = this.state.stuff.map( ( stuff, i ) => {
+            return (
+                <span key={i}>{ stuff.title }</span>
+            )
+        } )
+
         console.log( this.state.stuff )
         return(
             <div className='home-body'>
                 <p>Welcome to the home page!!</p>
                 <Link to={{ pathname: '/show-stuff', query: { stuff: this.props.stuff } }} ><button>To Stuff Page</button></Link>
                 <div id='box'>
-                    { JSON.stringify( this.state.stuff ) }
+                    { mappedStuff }
                 </div>
 
             </div>

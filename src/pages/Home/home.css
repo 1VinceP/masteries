@@ -18,5 +18,8 @@ html {
     margin: 40px 0;
     border: 1px solid black;
     padding: 5px;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
