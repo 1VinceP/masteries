@@ -12,6 +12,10 @@ html {
     align-items: center;
 }
 
+.home-welcome {
+    text-shadow: 4px 4px 6px rgba(52, 105, 141, 0.8)
+}
+
 #box {
     width: 400px;
     height: 400px;
@@ -38,4 +42,22 @@ html {
 .home-stuff button {
     border-radius: 10px;
     font-family: cursive;
+}
+
+.home-link-button {
+    animation: myFade 2s infinite;
+}
+
+
+@keyframes myFade {
+    0% { opacity: 1; }
+    50% { opacity: 0.2; }
+    100% { opacity: 1; }
+}
+
+@media (max-width: 800px) {
+    #box {
+        width: 300px;
+        background: beige;
+    }
 }

@@ -51,8 +51,8 @@ class Home extends Component {
         console.log( this.state.stuff )
         return(
             <div className='home-body'>
-                <p>Welcome to the home page!!</p>
-                <Link to={{ pathname: '/show-stuff', query: { stuff: this.props.stuff } }} ><button>To Stuff Page</button></Link>
+                <p className='home-welcome' >Welcome to the home page!!</p>
+                <Link to={{ pathname: '/show-stuff', query: { stuff: this.props.stuff } }} ><button className='home-link-button'>To Stuff Page</button></Link>
                 <div id='box'>
                     { mappedStuff }
                 </div>
@@ -73,4 +73,4 @@ function mapDispatchToProps() {
     return { getStuff }
 }
 
-export default connect( mapStateToProps, mapDispatchToProps )(Home);
+export default connect( mapStateToProps, { getStuff } )(Home);

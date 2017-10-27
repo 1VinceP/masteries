@@ -58,8 +58,8 @@ class ShowStuff extends Component {
                 <p>Make more stuff here!</p>
 
                 <form id='form' >
-                    <input onChange={e => this.handleChange(e)} placeholder='Title' name='title' />
-                    <input onChange={e => this.handleChange(e)} placeholder='Info' name='info' />
+                    <input className='title' onChange={e => this.handleChange(e)} placeholder='Title' name='title' />
+                    <input className='info' disabled='disabled' onChange={e => this.handleChange(e)} placeholder='Info' name='info' />
                 </form>
                 
                 <div>
@@ -68,16 +68,18 @@ class ShowStuff extends Component {
                 </div>
                 
                 <br/><br/>
-                <div>{this.state.match}</div>
+                <div style={{color: 'white'}}>{this.state.match}</div>
 
                 <br/><br/>
                 <div className='stuff-box' >
-                    <div>
+                    <div className='math-buttons'>
                         <button onClick={() => this.setState({number: this.state.number - 1})} >-</button>
                         <button onClick={() => this.setState({number: this.state.number + 1})} >+</button>
                     </div>
                     <CountDisplay number={this.state.number} />
                 </div>
+
+                <div className='floaty-box'></div>
 
             </div>
         )

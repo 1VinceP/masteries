@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default function CountDisplay( props ) {
 
     return(
-        <div>
+        <div style={{color: 'white'}}>
             {props.number}
         </div>
     )
